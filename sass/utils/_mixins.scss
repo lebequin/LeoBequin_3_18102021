@@ -22,17 +22,33 @@
 }
 
 @mixin btn {
+    background-image: linear-gradient(to top, $colour-primary 0%, $colour-secondary  100%);
     padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
+    color: $colour-white;
     cursor: pointer;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    text-decoration: none;
     &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
+        background-position: bottom bottom;
+        color: $colour-white;
+        text-decoration: none;
     }
     &--full-width {
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+@mixin card {
+    background-color: $colour-white;
+    border-radius:12px;
+    box-shadow: 4px 4px 10px $colour-light-grey;
+    max-width: 90%;
+    margin: auto;
+    &:hover{
+        transform: scale(1.05);
+        transition: ease-in-out .2s;
     }
 }

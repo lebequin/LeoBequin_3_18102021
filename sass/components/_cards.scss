@@ -1,0 +1,9 @@
+.card {
+    @include card;
+
+    & > img {
+        display: block;
+        width: auto;
+        object-fit: cover;
+    }
+}

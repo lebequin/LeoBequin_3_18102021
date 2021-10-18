@@ -1,16 +1,29 @@
+@font-face {
+    font-family: 'Shrikhand', sans-serif;
+    src: url('/public/fonts/Shrikhand-Regular.ttf');
+    font-weight: normal;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
+    color: $colour-black;
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.7;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', sans-serif;
     font-weight: 900;
     font-size: 5rem;
     font-style: italic;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    font-style: normal;
 }
 
 textarea {
