@@ -1,0 +1,19 @@
+{
+  "name": "oh-my-food-project",
+  "version": "1.0.0",
+  "description": "Projet mobile first de carte de restaurant",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lebequin/LeoBequin_3_18102021.git"
+  },
+  "author": "Léo Béquin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lebequin/LeoBequin_3_18102021/issues"
+  },
+  "homepage": "https://github.com/lebequin/LeoBequin_3_18102021#readme"
+}
