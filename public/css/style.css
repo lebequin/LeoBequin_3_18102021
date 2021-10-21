@@ -1,3 +1,11 @@
+/*@mixin icon {
+    fill:#333;
+    width: 1em;
+    height: 1em;
+    &:hover{
+        background-image: linear-gradient(to top, $colour-primary 0%, $colour-secondary  100%);
+    }
+}*/
 *,
 *::after,
 *::before {
@@ -57,13 +65,15 @@ button {
 
 .btn {
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-  padding: 1.5rem;
+  padding: 1.2rem 2.5rem;
   color: #fff;
   cursor: pointer;
   transition: 0.5s;
   background-size: 200% auto;
-  border-radius: 10px;
+  border-radius: 25px;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
 .btn:hover {
   background-position: bottom bottom;
@@ -75,6 +85,80 @@ button {
   margin: 0 auto;
 }
 
+.btn-step {
+  background-color: #f6f6f6;
+  padding: 2rem 2.5rem;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 4px 7px #ddd;
+  text-decoration: none;
+  color: #0f0f0f;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+}
+.btn-step i {
+  margin-right: 30px;
+  width: 20px;
+}
+.btn-step::before {
+  content: "";
+  background-color: #9356dc;
+  color: #fff;
+  border-radius: 30px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  padding: 0 8px;
+  left: -12px;
+}
+.btn-step:nth-child(1)::before {
+  content: "1";
+}
+.btn-step:nth-child(2)::before {
+  content: "2";
+}
+.btn-step:nth-child(3)::before {
+  content: "3";
+}
+
+.card {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #f6f6f6;
+  max-width: 90%;
+  margin: auto;
+  color: #000;
+  text-decoration: none;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: ease-in-out 0.2s;
+}
+.card > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  background-color: #9356DC;
+  mask-image: url("/public/images/empty-heart.svg");
+  background-size: cover;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 .header {
   background: #eaeaea;
   display: flex;
@@ -83,17 +167,87 @@ button {
   width: 100%;
 }
 .header__logo {
+  display: block;
+  max-width: 70%;
+  margin: auto;
+  padding: 10px;
   text-shadow: 0.55rem 0.55rem #fff;
 }
 
 .localisation {
-  background: #f6f6f6;
+  background: #eaeaea;
   text-align: center;
+  box-shadow: inset 0px 3px 9px #bbb;
+  padding: 10px;
 }
 
 .nav {
   display: block;
   margin: auto;
+}
+
+footer {
+  padding: 5% 20px;
+  background-color: #353535;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer i {
+  width: 25px;
+}
+
+footer img {
+  fill: #fff;
+  max-width: 35%;
+  margin-bottom: 15px;
+}
+
+#resto {
+  background-color: #f6f6f6;
+  padding-bottom: 60px;
+}
+
+.fas.fa-map-marker-alt {
+  margin-right: 20px;
+}
+
+#explore h2 {
+  text-align: center;
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+#explore h4 {
+  font-weight: 300;
+  text-align: center;
+  margin: 15px 0;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+#explore {
+  text-align: center;
+  padding-bottom: 3.5em;
+  background-color: #f6f6f6;
+}
+
+#intro {
+  padding: 2em 0;
+  max-width: 90%;
+  margin: auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  margin: 30px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,13 +23,15 @@
 
 @mixin btn {
     background-image: linear-gradient(to top, $colour-primary 0%, $colour-secondary  100%);
-    padding: $grid-gutter;
+    padding: 1.2rem 2.5rem;
     color: $colour-white;
     cursor: pointer;
     transition: 0.5s;
     background-size: 200% auto;
-    border-radius: 10px;
+    border-radius: 25px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
     &:hover{
         background-position: bottom bottom;
         color: $colour-white;
@@ -40,15 +42,79 @@
         margin: 0 auto;
     }
 }
+  
+@mixin btn-step {
+    background-color: #f6f6f6;
+    padding: 2rem 2.5rem;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 4px 7px #ddd;
+    text-decoration: none;
+    color: #0f0f0f;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    & i {
+        margin-right: 30px;
+        width: 20px;
+    }
+    &::before {
+        content: "";
+        background-color: #9356dc;
+        color: #fff;
+        border-radius: 30px;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+        padding: 0 8px;
+        left: -12px;
+    }
+    &:nth-child(1)::before {
+        content: "1";
+    }
+    &:nth-child(2)::before {
+        content: "2";
+    }
+    &:nth-child(3)::before {
+        content: "3";
+    }
+}
 
 @mixin card {
+    display: block;
     background-color: $colour-white;
-    border-radius:12px;
+    border-radius: 20px;
     box-shadow: 4px 4px 10px $colour-light-grey;
     max-width: 90%;
     margin: auto;
+    color: $colour-black;
+    text-decoration: none;
     &:hover{
         transform: scale(1.05);
         transition: ease-in-out .2s;
     }
+}
+
+/*@mixin icon {
+    fill:#333;
+    width: 1em;
+    height: 1em;
+    &:hover{
+        background-image: linear-gradient(to top, $colour-primary 0%, $colour-secondary  100%);
+    }
+}*/
+
+@mixin icon {
+height: 20px;
+width: 20px;
+background-color:$colour-primary;
+mask-image:url("/public/images/empty-heart.svg");
+background-size: cover;
+-webkit-mask-size: contain;
+mask-size: contain;
+-webkit-mask-position: center;
+mask-position: center;
+-webkit-mask-repeat:no-repeat;
+mask-repeat:no-repeat;
 }

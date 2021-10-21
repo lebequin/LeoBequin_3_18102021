@@ -5,11 +5,17 @@
     align-items: center;
     width: 100%;   
     &__logo {
+        display: block;
+        max-width: 70%;
+        margin: auto;
+        padding: 10px;
         @include heading-shadow($colour-white);
     }
 }
 
 .localisation {
-    background: $colour-light-grey;
+    background: #eaeaea;
     text-align: center;
+    box-shadow: inset 0px 3px 9px #bbb;
+    padding: 10px;
 }
