@@ -3,12 +3,34 @@
 
     & > img {
         width: 100%;
+        height: 180px;
+        object-position: center;
         object-fit: cover;
         border-radius: 20px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
     }
-    
+    & div {
+        display: inline-block;
+        max-width: 90%;
+      }
+      
+    & .far.fa-heart {
+        display: inline-block;
+        max-width: 10%;
+      }
+      
+    & h3, & p {
+        line-height: 28px;
+    }
+    & h3 {
+        padding: 0 80px 0 20px;
+        font-size: 21px;
+    }
+    & p {
+        padding: 0 80px 10px 20px;
+        font-size: 20px;
+    }
 }
 
   
