@@ -19,7 +19,9 @@
         display: inline-block;
         max-width: 10%;
       }
-      
+    & .fas.fa-heart {
+        display: none;
+    }
     & h3, & p {
         line-height: 28px;
     }
@@ -33,4 +35,63 @@
     }
 }
 
-  
+.card-menu {
+    @include card-menu;
+
+    & .text-container {
+        display: block;
+        width: 90%;
+    }
+    & .price {
+        width: 10%;
+    }  
+    & .check {
+        display: flex;
+        width: 120px;
+        background-color: #9ae3d1;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: #fff;
+        transform: translateX(120px);
+        position: absolute;
+        height: 100%;
+        right: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        opacity: 0;
+    }
+      
+    & .text-container {
+        padding: 10px 0 10px 20px;
+        & h3 {
+            font-size: 18px;
+        }
+        & p {
+            font-size: 16px;
+        }
+    }
+      
+    & .price {
+        display: flex;
+        align-items: end;
+        margin: 0 10px 5px 0px;
+        font-weight: bold;
+    }
+    
+    & .check {
+        width: 80px;
+        & i {
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+@for $i from 1 through 3 {
+    .card-menu {
+        &:nth-child(#{$i}) {
+            animation-delay: $i * 50ms;
+        }
+    }
+  }

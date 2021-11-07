@@ -11,8 +11,16 @@
         padding: 10px;
         @include heading-shadow($colour-white);
     }
-}
 
+}
+header {
+    & a {
+        position: absolute;
+        left: 20px;
+        top: 12px;
+        color: #000;
+    }
+}
 .localisation {
     background: #eaeaea;
     text-align: center;

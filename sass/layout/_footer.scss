@@ -6,16 +6,20 @@ footer {
     flex-direction: column;
     font-size: 14px;
     font-weight: 400;
+
+    & a {
+        text-decoration: none;
+        color: #fff;
+    }
+    & i {
+        width: 25px;
+    }
+    & .color-white {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        max-width: 35%;
+        margin-bottom: 15px;
+    }
 }
-  
-footer i {
-    width: 25px;
-}
-  
-footer .color-white {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    max-width: 35%;
-    margin-bottom: 15px;
-}
+
 
   

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Shrikhand';
-    src: url('/public/fonts/Shrikhand-Regular.ttf');
-    src: url('/public/fonts/Shrikhand-Regular.woff');
+    src: url('../fonts/Shrikhand-Regular.ttf');
+    src: url('../fonts/Shrikhand-Regular.woff');
     font-style: normal;
 }
 
@@ -22,8 +22,8 @@ h1 {
 
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 28px;
     font-style: normal;
 }
 

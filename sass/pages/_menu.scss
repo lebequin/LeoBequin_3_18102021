@@ -13,12 +13,6 @@ header {
     z-index: 0;
 }
   
-.fas.fa-arrow-left {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-  
 .header--menu {
     background-color: #f2f2f2;
     border-radius: 40px;
@@ -50,12 +44,38 @@ header {
         text-transform: uppercase;
         font-weight: 400;
     }
+
 }
 
 .add-to-card {
     text-align: center;
     background-color: #f2f2f2;
     padding: 20px 0 80px 0;
-  }
+}
   
-  
+@keyframes smooth-animation
+{
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(12px);
+        animation-delay: 10ms;
+        opacity: .1;
+    }
+    50% {
+        transform: translateY(7px);
+        animation-delay: 10ms;
+        opacity: .3;
+    } 
+    75% {
+        transform: translateY(2px);
+        animation-delay: 20ms;
+        opacity: .7;
+    } 
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -23,7 +23,7 @@
 
 @mixin btn {
     background-image: linear-gradient(to top, $colour-primary 0%, $colour-secondary  100%);
-    padding: 1.2rem 2.5rem;
+    padding: 1.7rem 2.5rem;
     color: $colour-white;
     cursor: pointer;
     transition: 0.5s;
@@ -54,6 +54,7 @@
     font-size: 15px;
     font-weight: bold;
     position: relative;
+    counter-increment: link;
     & i {
         margin-right: 30px;
         width: 20px;
@@ -69,17 +70,9 @@
         top: 20px;
         padding: 0 8px;
         left: -12px;
+        content: counter(link);
     }
-    &:nth-child(1)::before {
-        content: "1";
-    }
-    &:nth-child(2)::before {
-        content: "2";
-    }
-    &:nth-child(3)::before {
-        content: "3";
-    }
-    &:last-child {
+    &:hover {
         background-color: #f5edff;
         & i {
             color: #9356dc;
@@ -107,23 +100,44 @@
     
 }
 
-@mixin icon {
-    position: absolute;
-    right: 20px;
-    bottom: 25px;
-    & > img:nth-child(1){
-        width: 25px;
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(270deg) brightness(1%) contrast(100%);
-        display: block;
-    }
-    &:hover > img:nth-child(1){
-        display: none;
-    }
-    & > img:nth-child(2) {
-        width: 25px;
-        display: none;
-    }
-    &:hover > img:nth-child(2) {
-        display: block;
+@mixin card-menu {
+    display: flex;
+    background-color: $colour-white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px #ddd;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    color: $colour-black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transform-origin: top;
+    animation: .2s ease-in-out both smooth-animation;    
+    &:hover {
+        & .check {
+            transform: translateX(0px);
+            opacity: 1;
+            transition: all .4s;
+        }
+        & .price {
+            transform: translateX(-45px);
+        }
+        & .text-container {
+            overflow: hidden;
+            width: 75%;
+            text-overflow: ellipsis;
+            transition: all .4s;
+            & p {
+                width: 65%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        & .check i {
+            transform: rotate(360deg);
+            transition: all .4s;
+        }
     }
 }

@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta title="Oh My food" content="Découvrez des restaurants d'exception, sélectionnés par nos soins">
+    <meta name="title" content="Oh My Food">
+    <meta name="description" content="Découvrez des restaurants d'exception, sélectionnés par nos soins">
     <title>Oh My food</title>
     <link rel="stylesheet" type="text/css" href="./public/css/style.css">
     <script src="https://kit.fontawesome.com/31fe73ddf6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav><img src="public/images/ohmyfood.png" class="header__logo"></nav>
+        <nav><img src="public/images/ohmyfood.png" class="header__logo" alt="logo Oh my food"></nav>
 
-        <div class="localisation"><h2><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h2></div>
+        <div class="localisation">
+            <i class="fas fa-map-marker-alt"></i><input placeholder="Paris, Belleville" type="text">
+        </div>
     </header>
 
     <section id="explore">
-        <h2>Réservez le menu qui vous convient</h2>
+        <h1>Réservez le menu qui vous convient</h1>
         <h4>Découvrez des restaurants d'exception, sélectionnés par nos soins</h4>
         <a href="#" class="btn">Explorer nos restaurants</a>
     </section>
+    
     <section id="intro">
         <h2>Fonctionnement</h2>
         <div class="step">
@@ -33,50 +37,50 @@
     <section id="resto">
         <h2>Restaurants</h2>
         <a href="menu-la-palette-du-gout.html" class="card">
-            <img src="public/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <img src="public/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Illustration La palette du goût">
             <span class="new-product">Nouveau</span>
             <h3>La palette du goût</h3>
             <p>Ménilmontant</p>
-            <div class="svg-icon">
-                <img src="public/images/empty-heart.svg">
-                <img src="public/images/plain-heart-hover.png"> 
-            </div>
+            <span class="fa-stack custom">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </span>
         </a>
         <a href="menu-la-note-enchantee.html" class="card">
-            <img src="public/images/stil-u2Lp8tXIcjw-unsplash.jpg">
+            <img src="public/images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Illustration La note enchantée">
             <span class="new-product">Nouveau</span>
             <h3>La note enchantée</h3>
             <p>Charonne</p>
-            <div class="svg-icon">
-                <img src="public/images/empty-heart.svg">
-                <img src="public/images/plain-heart-hover.png"> 
-            </div>   
+            <span class="fa-stack custom">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </span>
         </a>
         <a href="menu-a-la-française.html" class="card">
-            <img src="public/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+            <img src="public/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Illustration À la française">
             <h3>À la française</h3>
             <p>Cité Rouge</p>
-            <div class="svg-icon">
-                <img src="public/images/empty-heart.svg">
-                <img src="public/images/plain-heart-hover.png"> 
-            </div>
+            <span class="fa-stack custom">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </span>
         </a>
         <a href="menu-le-delice-des-sens.html" class="card">
-            <img src="public/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+            <img src="public/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Illustration Le délice des sens">
             <h3>Le délice des sens</h3>
             <p>Folie-Méricourt</p>
-            <div class="svg-icon">
-                <img src="public/images/empty-heart.svg">
-                <img src="public/images/plain-heart-hover.png"> 
-            </div> 
+            <span class="fa-stack custom">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </span>
         </a>
     </section>
     <footer>
-        <img src="public/images/ohmyfood@2x.svg" class="color-white">
+        <img src="public/images/ohmyfood@2x.svg" class="color-white" alt="logo Oh my food">
         <a><i class="fas fa-utensils"></i> Proposer un restaurant</a>
         <a><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
         <a>Mentions Légales</a>
-        <a>Contact</a>
+        <a href="mailto:contact@ohmyfood.com">Contact</a>
     </footer>
 </body>
 </html>
