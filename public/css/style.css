@@ -69,7 +69,6 @@ button {
   font-size: 16px;
 }
 .btn:hover {
-  background-position: bottom bottom;
   color: #fff;
   text-decoration: none;
 }
@@ -114,6 +113,17 @@ button {
 .btn-step:hover i {
   color: #9356dc;
 }
+@media screen and (min-width: 1000px) {
+  .btn-step:nth-last-child(1) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .btn-step {
+    margin-right: 5%;
+    width: 30%;
+  }
+}
 
 .card {
   display: block;
@@ -140,6 +150,11 @@ button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+@media screen and (min-width: 1000px) {
+  .card > img {
+    height: 300px;
+  }
+}
 .card div {
   display: inline-block;
   max-width: 90%;
@@ -162,6 +177,22 @@ button {
   padding: 0 80px 10px 20px;
   font-size: 20px;
 }
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 46%;
+  }
+  .card:nth-child(2n) {
+    margin-right: 2%;
+  }
+  .card:nth-child(2n+1) {
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card {
+    margin-bottom: 3%;
+  }
+}
 
 .card-menu {
   display: flex;
@@ -176,7 +207,7 @@ button {
   position: relative;
   overflow: hidden;
   transform-origin: top;
-  animation: 0.2s ease-in-out both smooth-animation;
+  animation: 0.2s cubic-bezier(0.25, 0.25, 0.25, 1.25) both smooth-animation;
 }
 .card-menu:hover .check {
   transform: translateX(0px);
@@ -185,6 +216,11 @@ button {
 }
 .card-menu:hover .price {
   transform: translateX(-45px);
+}
+@media screen and (min-width: 1000px) {
+  .card-menu:hover .price {
+    transform: translateX(-75px);
+  }
 }
 .card-menu:hover .text-container {
   overflow: hidden;
@@ -198,9 +234,31 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.card-menu:hover .text-container h3 {
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .card-menu:hover .check i {
   transform: rotate(360deg);
   transition: all 0.4s;
+}
+@media screen and (min-width: 600px) {
+  .card-menu:hover .text-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card-menu {
+    margin: unset;
+    margin-right: 6%;
+    margin-bottom: 20px;
+    width: 47%;
+  }
+  .card-menu:nth-child(odd) {
+    margin-right: 0;
+  }
 }
 .card-menu .text-container {
   display: block;
@@ -232,7 +290,7 @@ button {
   font-size: 18px;
 }
 .card-menu .text-container p {
-  font-size: 16px;
+  font-size: 14px;
 }
 .card-menu .price {
   display: flex;
@@ -248,15 +306,23 @@ button {
 }
 
 .card-menu:nth-child(1) {
-  animation-delay: 50ms;
+  animation-delay: 150ms;
 }
 
 .card-menu:nth-child(2) {
-  animation-delay: 100ms;
+  animation-delay: 300ms;
 }
 
 .card-menu:nth-child(3) {
-  animation-delay: 150ms;
+  animation-delay: 450ms;
+}
+
+.card-menu:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.card-menu:nth-child(5) {
+  animation-delay: 750ms;
 }
 
 .header {
@@ -273,6 +339,11 @@ button {
   padding: 10px;
   text-shadow: 0.55rem 0.55rem #fff;
 }
+@media screen and (min-width: 600px) {
+  .header__logo {
+    max-width: 23% !important;
+  }
+}
 
 header a {
   position: absolute;
@@ -280,12 +351,53 @@ header a {
   top: 12px;
   color: #000;
 }
+@media screen and (min-width: 1000px) {
+  header a {
+    top: 25px;
+  }
+}
+
+.fas.fa-map-marker-alt {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+@media screen and (min-width: 1000px) {
+  .fas.fa-map-marker-alt {
+    left: 600px;
+  }
+}
+
+::placeholder {
+  font-size: 22px;
+  color: #000;
+  opacity: 0.8;
+}
 
 .localisation {
   background: #eaeaea;
   text-align: center;
   box-shadow: inset 0px 3px 9px #bbb;
   padding: 10px;
+  position: relative;
+}
+.localisation input {
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  text-align: center;
+  outline: none;
+  font-weight: 600;
+  font-size: 20px;
+  width: 50%;
+}
+.localisation input:focus-visible {
+  border-bottom: 1px solid #333;
+}
+@media screen and (min-width: 1000px) {
+  .localisation input {
+    width: 15%;
+  }
 }
 
 .nav {
@@ -314,6 +426,19 @@ footer .color-white {
   max-width: 35%;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 1000px) {
+  footer .color-white {
+    max-width: 15%;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  footer {
+    padding: 3% 15%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 header {
   width: 100%;
@@ -325,9 +450,16 @@ header {
 }
 
 .img-header {
-  max-width: 100%;
   position: relative;
   z-index: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+@media screen and (min-width: 1000px) {
+  .img-header {
+    height: 350px;
+  }
 }
 
 .header--menu {
@@ -344,8 +476,30 @@ header {
   font-family: "Shrikhand", sans-serif;
   padding-left: 5%;
 }
-.header--menu .svg-icon {
-  top: 32px;
+@media screen and (min-width: 1000px) {
+  .header--menu h1 {
+    font-size: 40px;
+    padding-left: 0;
+  }
+}
+.header--menu .fa-stack.custom {
+  bottom: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .header--menu .fa-stack.custom {
+    right: 17%;
+    bottom: 51px;
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header--menu {
+    padding: 35px 15%;
+  }
+  .header--menu .fa-stack.custom i {
+    font-size: 35px;
+  }
 }
 
 .menu {
@@ -360,6 +514,20 @@ header {
   width: 35px;
   text-transform: uppercase;
   font-weight: 400;
+}
+@media screen and (min-width: 1000px) {
+  .menu h2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menu {
+    padding: 20px 15%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .add-to-card {
@@ -405,36 +573,100 @@ header {
 #resto h2 {
   padding: 40px 5% 20px;
 }
-
-.fas.fa-map-marker-alt {
-  position: absolute;
-  top: 20px;
-  left: 70px;
+@media screen and (min-width: 600px) {
+  #resto {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  #resto h2 {
+    padding: 40px 0 20px;
+    width: 100%;
+  }
 }
 
-.localisation {
+.loader {
+  width: 30px;
+  height: 30px;
   position: relative;
+  margin: 1em auto;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  -webkit-animation-name: pacmanDot;
+  animation-name: pacmanDot;
+  transform: translateX(14px);
 }
-.localisation input {
-  background-color: transparent;
-  border: none;
-  height: 40px;
-  text-align: center;
-  outline: none;
-  font-weight: 600;
-  font-size: 20px;
-  width: 50%;
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 14px solid #9356dc;
+  border-right-color: transparent;
+  top: -12px;
+  left: -24px;
 }
-.localisation input:focus-visible {
-  border-bottom: 1px solid #333;
+.loader, .loader::before, .loader::after {
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.loader::before {
+  animation-name: upperJaw;
+}
+.loader::after {
+  animation-name: lowerJaw;
 }
 
-::placeholder {
-  font-size: 22px;
-  color: #000;
-  opacity: 0.8;
+@-webkit-keyframes pacmanDot {
+  0%, 50% {
+    background: #f876da;
+  }
+  51%, 100% {
+    background: none;
+  }
+  0%, 100% {
+    transform: translateX(19px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
 }
-
+@keyframes pacmanDot {
+  0%, 50% {
+    background: #f876da;
+  }
+  51%, 100% {
+    background: none;
+  }
+  0%, 100% {
+    transform: translateX(19px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+}
+@-webkit-keyframes upperJaw {
+  50% {
+    transform: rotate(50deg) translate(2px, -2px);
+  }
+}
+@keyframes upperJaw {
+  50% {
+    transform: rotate(50deg) translate(2px, -2px);
+  }
+}
+@-webkit-keyframes lowerJaw {
+  50% {
+    transform: rotate(-50deg) translate(2px, 2px);
+  }
+}
+@keyframes lowerJaw {
+  50% {
+    transform: rotate(-50deg) translate(2px, 2px);
+  }
+}
 #explore {
   text-align: center;
   padding-bottom: 3.5em;
@@ -467,6 +699,11 @@ header {
   padding-left: 12px;
   margin: 30px 0;
 }
+@media screen and (min-width: 1000px) {
+  .step {
+    flex-direction: row;
+  }
+}
 
 .new-product {
   color: #129172;
@@ -480,10 +717,12 @@ header {
   right: 15px;
 }
 
-.fas.fa-heart {
+.fa-stack.custom .fas.fa-heart {
   background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .fa-stack.custom {
@@ -495,7 +734,7 @@ header {
   line-height: 1;
   width: 25px;
 }
-.fa-stack.custom.fas.fa-heart {
+.fa-stack.custom .fas.fa-heart {
   display: none;
 }
 .fa-stack.custom:hover .far.fa-heart {
@@ -506,9 +745,6 @@ header {
 }
 .fa-stack.custom i {
   font-size: 25px;
-}
-.fa-stack.custom .fas.fa-heart {
-  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
