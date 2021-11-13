@@ -9,43 +9,61 @@
         border-radius: 20px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        @include desktop-only {
+            height: 300px;
+        }
     }
-    & div {
+    div {
         display: inline-block;
         max-width: 90%;
       }
       
-    & .far.fa-heart {
+    .far.fa-heart {
         display: inline-block;
         max-width: 10%;
       }
-    & .fas.fa-heart {
+    .fas.fa-heart {
         display: none;
     }
-    & h3, & p {
+    h3, & p {
         line-height: 28px;
     }
-    & h3 {
+    h3 {
         padding: 0 80px 0 20px;
         font-size: 21px;
     }
-    & p {
+    p {
         padding: 0 80px 10px 20px;
         font-size: 20px;
+    }
+
+    @include tablette-only {
+        flex: 46%;
+
+        &:nth-child(2n) {
+            margin-right: 2%;
+        }
+          
+        &:nth-child(2n+1) {
+            margin-left: 2%;
+        }
+    }
+    @include desktop-only {
+        margin-bottom: 3%;
     }
 }
 
 .card-menu {
     @include card-menu;
 
-    & .text-container {
+    .text-container {
         display: block;
         width: 90%;
     }
-    & .price {
+    .price {
         width: 10%;
     }  
-    & .check {
+    .check {
         display: flex;
         width: 120px;
         background-color: #9ae3d1;
@@ -62,36 +80,35 @@
         opacity: 0;
     }
       
-    & .text-container {
+    .text-container {
         padding: 10px 0 10px 20px;
-        & h3 {
+        h3 {
             font-size: 18px;
         }
-        & p {
-            font-size: 16px;
+        p {
+            font-size: 14px;
         }
     }
       
-    & .price {
+    .price {
         display: flex;
         align-items: end;
         margin: 0 10px 5px 0px;
         font-weight: bold;
     }
     
-    & .check {
+    .check {
         width: 80px;
-        & i {
+        i {
             transform: rotate(90deg);
         }
     }
+}  
 
-}
-
-@for $i from 1 through 3 {
+@for $i from 1 through 5 {
     .card-menu {
         &:nth-child(#{$i}) {
-            animation-delay: $i * 50ms;
+            animation-delay: $i * 150ms;
         }
     }
   }

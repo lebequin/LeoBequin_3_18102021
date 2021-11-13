@@ -1,53 +1,116 @@
 #resto {
     background-color: #f6f6f6;
     padding-bottom: 60px;
-    & h1 {
+    h1 {
         padding-left: 5%;
         margin: 15px 0;
         padding-top: 35px;
     }
-    & h2 {
+    h2 {
         padding: 40px 5% 20px;
     }
-     
-}
-
-.fas.fa-map-marker-alt {
-    position: absolute;
-    top: 20px;
-    left: 70px;
-}
-  
-.localisation {
-    position: relative;
-
-    & input {
-        background-color: transparent;
-        border: none;
-        height: 40px;
-        text-align: center;
-        outline: none;
-        font-weight: 600;
-        font-size: 20px;
-        width: 50%;
-        &:focus-visible {
-            border-bottom: 1px solid #333;
+    @include tablette-only {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5%;
+        h2 {
+            padding: 40px 0 20px;
+            width: 100%; 
         }
     }
 }
 
-::placeholder {
-    font-size: 22px;
-    color: #000;
-    opacity: 0.8;
+.loader {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 1em auto;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    -webkit-animation-name: pacmanDot;
+            animation-name: pacmanDot;
+    transform: translateX(14px);
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 14px solid #9356dc;
+        border-right-color: transparent;
+        top: -12px;
+        left: -24px;
+    }
+    &, &::before, &::after {
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    &::before {
+        animation-name: upperJaw;
+    }
+    &::after {
+        animation-name: lowerJaw;
+    }
 }
   
+  @-webkit-keyframes pacmanDot {
+    0%, 50% {
+      background: #f876da;
+    }
+    51%, 100% {
+      background: none;
+    }
+    0%, 100% {
+      transform: translateX(19px);
+    }
+    50% {
+      transform: translateX(14px);
+    }
+  }
+  
+  @keyframes pacmanDot {
+    0%, 50% {
+      background: #f876da;
+    }
+    51%, 100% {
+      background: none;
+    }
+    0%, 100% {
+      transform: translateX(19px);
+    }
+    50% {
+      transform: translateX(14px);
+    }
+  }
+  @-webkit-keyframes upperJaw {
+    50% {
+      transform: rotate(50deg) translate(2px, -2px);
+    }
+  }
+  @keyframes upperJaw {
+    50% {
+      transform: rotate(50deg) translate(2px, -2px);
+    }
+  }
+  @-webkit-keyframes lowerJaw {
+    50% {
+      transform: rotate(-50deg) translate(2px, 2px);
+    }
+  }
+  @keyframes lowerJaw {
+    50% {
+      transform: rotate(-50deg) translate(2px, 2px);
+    }
+  }
+
 #explore {
     text-align: center;
     padding-bottom: 3.5em;
     background-color: #f6f6f6;
 
-    & h1 {
+    h1 {
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 29px;
@@ -56,7 +119,7 @@
         margin-bottom: 15px;
         font-style: normal;
     }
-    & h4 {
+    h4 {
         font-weight: 300;
         line-height: 24px;
         margin-bottom: 42px;
@@ -76,6 +139,9 @@
     flex-direction: column;
     padding-left: 12px;
     margin: 30px 0;
+    @include desktop-only {
+        flex-direction: row;
+    }
 }
   
 .new-product {
@@ -91,10 +157,12 @@
 }
 
 
-.fas.fa-heart {
+.fa-stack.custom  .fas.fa-heart {
     background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
 }
   
 .fa-stack.custom {
@@ -106,24 +174,20 @@
     line-height: 1;
     width: 25px;
     
-    &.fas.fa-heart {
+    .fas.fa-heart {
         display: none;
     }
     &:hover {
-        & .far.fa-heart {
+        .far.fa-heart {
         display: none;
         }
-        & .fas.fa-heart {
+        .fas.fa-heart {
             display: block;
         }
     }
-    & i {
+    i {
         font-size: 25px;
     }
-    & .fas.fa-heart {
-        display: none;
-    }
-
 }
     
   

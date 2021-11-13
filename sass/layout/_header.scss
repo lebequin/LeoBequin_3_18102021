@@ -10,20 +10,65 @@
         margin: auto;
         padding: 10px;
         @include heading-shadow($colour-white);
+        @include tablette-only {
+            max-width: 23%!important;
+        }
     }
-
 }
+
 header {
     & a {
         position: absolute;
         left: 20px;
         top: 12px;
         color: #000;
+        @include desktop-only {
+            top: 25px;
+        }
     }
+}
+
+.fas.fa-map-marker-alt {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    @include desktop-only {
+        left: 600px;
+    }
+}
+
+::placeholder {
+    font-size: 22px;
+    color: #000;
+    opacity: 0.8;
 }
 .localisation {
     background: #eaeaea;
     text-align: center;
     box-shadow: inset 0px 3px 9px #bbb;
     padding: 10px;
+    position: relative;
+
+    input {
+        background-color: transparent;
+        border: none;
+        height: 40px;
+        text-align: center;
+        outline: none;
+        font-weight: 600;
+        font-size: 20px;
+        width: 50%;
+        &:focus-visible {
+            border-bottom: 1px solid #333;
+        }
+    }
+    @include desktop-only {
+        input {
+            width: 15%;
+        }
+    }
 }
+
+
+
+  

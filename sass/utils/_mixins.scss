@@ -12,7 +12,7 @@
         overflow: hidden;
         padding-top: 56.25%;
         position: relative;
-        & img {
+        img {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -33,7 +33,6 @@
     font-weight: bold;
     font-size: 16px;
     &:hover{
-        background-position: bottom bottom;
         color: $colour-white;
         text-decoration: none;
     }
@@ -55,7 +54,7 @@
     font-weight: bold;
     position: relative;
     counter-increment: link;
-    & i {
+    i {
         margin-right: 30px;
         width: 20px;
     }
@@ -74,9 +73,18 @@
     }
     &:hover {
         background-color: #f5edff;
-        & i {
+        i {
             color: #9356dc;
         }
+    }
+    &:nth-last-child(1){
+        @include desktop-only {
+            margin-right: 0;
+        }
+    }
+    @include desktop-only {
+        margin-right: 5%;
+        width: 30%;
     }
 }
 
@@ -113,31 +121,66 @@
     position: relative;
     overflow: hidden;
     transform-origin: top;
-    animation: .2s ease-in-out both smooth-animation;    
+    animation: .2s cubic-bezier(.25, .25, .25, 1.25) both smooth-animation;    
     &:hover {
-        & .check {
+        .check {
             transform: translateX(0px);
             opacity: 1;
             transition: all .4s;
         }
-        & .price {
+        .price {
             transform: translateX(-45px);
+            @include desktop-only {
+                transform: translateX(-75px);
+            }
         }
-        & .text-container {
+        .text-container {
             overflow: hidden;
             width: 75%;
             text-overflow: ellipsis;
             transition: all .4s;
-            & p {
+            p {
                 width: 65%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+            h3 {
+                width: 85%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
         }
-        & .check i {
+        .check i {
             transform: rotate(360deg);
             transition: all .4s;
         }
+    
+        @include tablette-only {
+            .text-container {
+                width: 90%;
+              }
+        }
+    }
+    @include desktop-only {
+        margin: unset;
+        margin-right: 6%;
+        margin-bottom: 20px;
+        width: 47%;
+        &:nth-child(odd) {
+            margin-right: 0;
+        }
+    }
+}
+
+@mixin tablette-only {
+    @media screen and (min-width: 600px){
+        @content;
+    }
+}
+@mixin desktop-only {
+    @media screen and (min-width: 1000px){
+        @content;
     }
 }
