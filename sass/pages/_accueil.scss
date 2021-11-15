@@ -19,6 +19,35 @@
         }
     }
 }
+.loader-container {
+    background-color: #fff;
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    animation: ease-in-out disparition-loader both 2s;
+}
+
+@keyframes disparition-loader {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        z-index: 1;
+    }
+    80% {
+        opacity: 0.7;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index:-1;
+    }
+}
 
 .loader {
     width: 30px;

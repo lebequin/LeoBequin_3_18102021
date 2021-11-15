@@ -35,11 +35,14 @@
     &:hover{
         color: $colour-white;
         text-decoration: none;
+        background-image: linear-gradient(to top, lightness-shift($colour-primary) 0%, lightness-shift($colour-secondary) 100%);
+        box-shadow: 3px 4px 5px #aaa;
     }
     &--full-width {
         width: 100%;
         margin: 0 auto;
     }
+
 }
   
 @mixin btn-step {
