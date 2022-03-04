@@ -9,7 +9,7 @@
 ***
 ## 📎 Projet 3 - Dynamisez une page web avec des animations CSS - Ohmyfood!
 
-Le site hébergé sur GitHub : [Ohmyfood](https://lebequin.github.io/LeoBequin_3_18102021/)
+Le site hébergé sur GitHub : [Ohmyfood](https://lebequin.github.io/Ohmyfood_Dynamisez_page_web/)
 
 ### 🔨 Créer un site dynamique grâce à HTML & CSS
 
